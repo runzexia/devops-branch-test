@@ -22,7 +22,7 @@ spec:
         group: devopstest
     spec:
       containers:
-        - name: devops-mysql
+        - name: devops-nginx
           image: nginx:latest
           ports:
             - name: tcp-80
