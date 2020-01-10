@@ -1,20 +1,20 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: devops-nginx-svc
+  name: devops-nginx-svc-01
   namespace: ks-devops-test
   labels:
     app: devopstest
-    container: devops-nginx
+    container: devops-nginx-01
     group: devopstest
 spec:
   ports:
-    - name: devops-nginx
+    - name: devops-nginx-01
       protocol: TCP
       port: 80
       targetPort: 80
   selector:
     app: devopstest
-    container: devops-nginx
+    container: devops-nginx-01
     group: devopstest
   sessionAffinity: None
