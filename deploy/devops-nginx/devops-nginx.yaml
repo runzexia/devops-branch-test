@@ -1,28 +1,28 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: devops-nginx-deployment
+  name: devops-nginx-deployment-01
   namespace: ks-devops-test
   labels:
     app: devopstest
-    container: devops-nginx
+    container: devops-nginx-01
     group: devopstest
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: devopstest
-      container: devops-nginx
+      container: devops-nginx-01
       group: devopstest
   template:
     metadata:
       labels:
         app: devopstest
-        container: devops-nginx
+        container: devops-nginx-01
         group: devopstest
     spec:
       containers:
-        - name: devops-mysql
+        - name: devops-nginx-01
           image: nginx:latest
           ports:
             - name: tcp-80
