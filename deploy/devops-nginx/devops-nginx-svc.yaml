@@ -9,7 +9,7 @@ metadata:
     group: devopstest
 spec:
   ports:
-    - name: devops-nginx
+    - name: devops-nginx-01
       protocol: TCP
       port: 80
       targetPort: 80
